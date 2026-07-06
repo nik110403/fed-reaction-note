@@ -1,0 +1,17 @@
+# Claude / agent tooling — never publish
+.claude/
+.mcp.json
+CLAUDE.md
+CLAUDE.local.md
+.claude-*
+
+# Secrets
+.Renviron
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Heavy / regenerable intermediates
+output/data/*.rds
