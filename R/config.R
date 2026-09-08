@@ -17,6 +17,8 @@ if (!nzchar(FRED_API_KEY)) {
 }
 fredr::fredr_set_key(FRED_API_KEY)
 
+FRED_VINTAGE <- as.Date("2026-09-08")   # realtime pin; see README "Data vintage"
+
 # ---- paths -------------------------------------------------------------------
 PROJECT_ROOT <- getwd()
 DIR_DATA     <- file.path(PROJECT_ROOT, "output/data")

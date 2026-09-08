@@ -17,6 +17,13 @@ vintage retrieved for the published note. The DGS2 window is locked to 2026-06-0
 2024-01-01 through whatever FRED reports as latest at pull time (`MONTHLY_START`,
 `MONTHLY_END`).
 
+`R/config.R` also pins a `FRED_VINTAGE` (realtime-as-of date) passed as
+`realtime_start`/`realtime_end` on every FRED pull, with the raw response archived under
+`data-raw/fred/<FRED_VINTAGE>/`. The published figures predate this pin — they reflect
+whatever FRED reported at publication time, not `FRED_VINTAGE`. Re-running `R/01_data.R`
+reproduces the FRED state as of `FRED_VINTAGE`, which will diverge from the published
+numbers as FRED revises these series.
+
 ## Requirements
 
 - R (≥ 4.0); packages: `fredr`, `dplyr`, `zoo`, `lubridate`, `jsonlite`

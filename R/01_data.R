@@ -3,13 +3,22 @@
 
 source("R/config.R")
 
+ARCHIVE_DIR <- file.path(PROJECT_ROOT, "data-raw", "fred", FRED_VINTAGE)
+if (!dir.exists(ARCHIVE_DIR)) dir.create(ARCHIVE_DIR, recursive = TRUE)
+archived_series <- character(0)
+
 pull <- function(series_id, start, end, units = "lin") {
-  fredr::fredr_series_observations(
+  raw <- fredr::fredr_series_observations(
     series_id          = series_id,
     observation_start  = start,
     observation_end    = end,
-    units              = units
-  ) |>
+    units              = units,
+    realtime_start     = FRED_VINTAGE,
+    realtime_end       = FRED_VINTAGE
+  )
+  write.csv(raw, file.path(ARCHIVE_DIR, paste0(series_id, ".csv")), row.names = FALSE)
+  archived_series[[length(archived_series) + 1]] <<- series_id
+  raw |>
     dplyr::select(date, value) |>
     dplyr::filter(!is.na(value))
 }
@@ -59,6 +68,13 @@ payems <- pull("PAYEMS", MONTHLY_START %m-% months(1), MONTHLY_END, units = "lin
 
 ahe <- pull("CES0500000003", MONTHLY_START, MONTHLY_END, units = "pc1") |>
   dplyr::mutate(series = "CES0500000003")
+
+writeLines(
+  c(paste("FRED_VINTAGE:", FRED_VINTAGE),
+    paste("Pulled:", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
+    "Series:", archived_series),
+  file.path(ARCHIVE_DIR, "VINTAGE.txt")
+)
 
 # ── merge, save ─────────────────────────────────────────────────────────────
 df <- dplyr::bind_rows(dgs2, pcepi, pcepilfe, energy, payems, ahe) |>
