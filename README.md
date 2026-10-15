@@ -1,7 +1,7 @@
 # Fed Reaction Note
 
-Replication repository for the market note *Calibrated to the Headline: Two Prints and the
-Path That Moved Between Them*.
+Replication repository for the market note [*Calibrated to the Headline: Two Prints and the
+Path That Moved Between Them*](https://nikkhosravipour.com/post/calibrated-to-the-headline).
 
 R pulls daily and monthly macro series from FRED and produces Chart.js widgets and static
 PNG figures tracing how the 2-year Treasury yield repriced across the June 2026 CPI, FOMC,
@@ -80,5 +80,6 @@ markdown body. The `*.html` files are the same fragment unfenced, for local prev
 
 ## License
 
-Source data is public, served by [FRED](https://fred.stlouisfed.org/) and subject to its
-terms.
+Code, text and figures: CC-BY-4.0 (see `LICENSE`). Source data is public, served by
+[FRED](https://fred.stlouisfed.org/) and subject to its terms; the archived raw pulls under
+`data-raw/fred/` are redistributed on that basis.
