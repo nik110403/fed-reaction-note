@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it as below."
+type: software
+title: "Calibrated to the Headline: Two Prints and the Path That Moved Between Them"
+abstract: "In June 2026 the 2-year Treasury yield was repriced four times in four weeks, from 4.13% to a 4.24% peak and back to 4.14%, driven as much by re-estimates of the committee as by news about the economy."
+authors:
+  - family-names: Khosravipour
+    given-names: Nik
+    orcid: "https://orcid.org/0009-0007-4464-5002"
+repository-code: "https://github.com/nik110403/fed-reaction-note"
+url: "https://nikkhosravipour.com/post/calibrated-to-the-headline"
+license: MIT
