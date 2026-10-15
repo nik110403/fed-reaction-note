@@ -4,7 +4,7 @@
 
 [Paper](https://nikkhosravipour.com/post/calibrated-to-the-headline) · [Data](#data-availability) · [Site](https://nikkhosravipour.com)
 
-[![License: MIT](https://img.shields.io/badge/code-MIT-8c2f1b?style=flat)](LICENSE) [![License: CC BY 4.0](https://img.shields.io/badge/text%20and%20figures-CC%20BY%204.0-8c2f1b?style=flat)](LICENSE-docs) [![R 4.0+](https://img.shields.io/badge/R-4.0%2B-57534e?style=flat)](https://www.r-project.org/)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23404671-8c2f1b?style=flat)](https://doi.org/10.5281/zenodo.23404671) [![License: MIT](https://img.shields.io/badge/code-MIT-8c2f1b?style=flat)](LICENSE) [![License: CC BY 4.0](https://img.shields.io/badge/text%20and%20figures-CC%20BY%204.0-8c2f1b?style=flat)](LICENSE-docs) [![R 4.0+](https://img.shields.io/badge/R-4.0%2B-57534e?style=flat)](https://www.r-project.org/)
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="output/figures/fig1_repricing-dark.png"><img src="output/figures/fig1_repricing.png" alt="Line chart of the 2-year Treasury yield, daily close, June 2026, with markers for the CPI, FOMC, PCE and payrolls releases" width="100%"></picture>
 
@@ -77,7 +77,7 @@ The widgets follow the contract of the author's site: Chart.js 4.4.1 from jsDeli
 
 ## Citation
 
-GitHub shows a "Cite this repository" button from `CITATION.cff`. BibTeX:
+Archived on Zenodo: [doi:10.5281/zenodo.23404671](https://doi.org/10.5281/zenodo.23404671) (all versions). GitHub shows a "Cite this repository" button from `CITATION.cff`. BibTeX:
 
 <details>
 <summary>BibTeX</summary>
@@ -87,6 +87,7 @@ GitHub shows a "Cite this repository" button from `CITATION.cff`. BibTeX:
   author = {Khosravipour, Nik},
   title  = {Calibrated to the Headline: Two Prints and the Path That Moved Between Them},
   year   = {2026},
+  doi    = {10.5281/zenodo.23404671},
   url    = {https://github.com/nik110403/fed-reaction-note}
 }
 ```
