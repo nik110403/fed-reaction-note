@@ -1,0 +1,12 @@
+repo: fed-reaction-note
+captured_at: 2026-09-11T17:09:56+0200
+R_version: 4.3.3
+n_packages: 28
+n_missing: 0
+loader_file: R/config.R
+source_lock_sha256: f87391ac178640f0cfa83602efead5a8686ecc814cfd4f201b5c0249fe1ed812
+source_lock_path: provenance/captured-environment.lock
+missing_packages: none (fed-reaction-note.missing is empty)
+
+Capture: union of the loader file's literal package vector and renv::dependencies() static scan, minus base packages, resolved against the user library (4.3) at capture time.
+Label: later-captured plausible superset; not the producing environment and not evidence that published results reproduce

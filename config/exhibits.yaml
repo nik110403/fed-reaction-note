@@ -1,0 +1,47 @@
+{
+  "exhibits": [
+    {
+      "id": "data-note-export",
+      "title": "Tidy FRED export (date, series, value)",
+      "script": "R/01_data.R",
+      "outputs": [
+        "output/data/note_export.csv",
+        "output/data/note_export.rds"
+      ],
+      "claim": "Tidy FRED pull of DGS2 (2026-06-01 to 2026-07-03) and monthly PCEPI, PCEPILFE, DNRGRG3M086SBEA, PAYEMS, CES0500000003; input to all figures. README layout: R/01_data.R writes output/data/note_export.{csv,rds}; the .rds is written by the script but not tracked."
+    },
+    {
+      "id": "fig1",
+      "title": "Figure 1 — 2-year Treasury yield repricing",
+      "script": "R/02_export_charts.R",
+      "outputs": [
+        "output/figures/fig1_repricing.png",
+        "output/widgets/fig1_repricing.html",
+        "output/widgets/fig1_repricing.embed.md"
+      ],
+      "claim": "DGS2 levels across the June 2026 CPI, FOMC, PCE and NFP prints; README FRED series table: fig1."
+    },
+    {
+      "id": "fig2",
+      "title": "Figure 2 — PCE inflation decomposition",
+      "script": "R/02_export_charts.R",
+      "outputs": [
+        "output/figures/fig2_decomposition.png",
+        "output/widgets/fig2_decomposition.html",
+        "output/widgets/fig2_decomposition.embed.md"
+      ],
+      "claim": "Year-over-year PCEPI, PCEPILFE and DNRGRG3M086SBEA; README FRED series table: fig2."
+    },
+    {
+      "id": "fig3",
+      "title": "Figure 3 — payrolls and wages",
+      "script": "R/02_export_charts.R",
+      "outputs": [
+        "output/figures/fig3_collision.png",
+        "output/widgets/fig3_collision.html",
+        "output/widgets/fig3_collision.embed.md"
+      ],
+      "claim": "PAYEMS monthly change and CES0500000003 year-over-year; README FRED series table: fig3."
+    }
+  ]
+}

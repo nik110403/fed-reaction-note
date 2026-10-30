@@ -47,7 +47,7 @@ All data come from [FRED](https://fred.stlouisfed.org/) and are subject to its t
 
 Vintage and revisions:
 
-- FRED revises `PCEPI`, `PCEPILFE`, `DNRGRG3M086SBEA`, `PAYEMS` and `CES0500000003` with each release and with benchmark revisions. Results reproduce exactly only against the vintage retrieved for the published note.
+- FRED revises `PCEPI`, `PCEPILFE`, `DNRGRG3M086SBEA`, `PAYEMS` and `CES0500000003` with each release and with benchmark revisions. The later environment capture does not establish exact reproduction of published results. The current FRED vintage pin postdates publication and may yield different values. The committed scored exports (`output/data/note_export.csv`, commit 8ac71dd) are comparison targets, not proof of reproduction.
 - The `DGS2` window is locked to 2026-06-01 through 2026-07-03 in `R/config.R` (`DGS2_START`, `DGS2_END`). The monthly series run from 2024-01-01 (`MONTHLY_START`) to whatever FRED reports as latest at pull time (`MONTHLY_END`).
 - `R/config.R` pins `FRED_VINTAGE` (2026-09-08), passed as `realtime_start` and `realtime_end` on every FRED pull. The raw response is archived under `data-raw/fred/<FRED_VINTAGE>/`. The published figures predate this pin and reflect whatever FRED reported at publication time. Re-running `R/01_data.R` reproduces the FRED state as of `FRED_VINTAGE`, which diverges from the published numbers as FRED revises these series.
 - `DGS2` has no weekend or holiday observations. The Figure 1 x-axis uses observed trading days only, and each event flag (CPI, FOMC, PCE, NFP) maps to the nearest observed date at or after the event date.
